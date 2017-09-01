@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar color="custom">
+    <ion-title>{{toUserId}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="home">
+    <ion-list no-lines>
+        <ion-item *ngFor="let msg of messages">
+          <p class="sender-class" *ngIf="msg.senderId == loginUser">  {{msg.message}}</p>
+          <p class="receiver-class" *ngIf="msg.senderId != loginUser">  {{msg.message}}</p>
+        </ion-item>
+    </ion-list>
+    <p  *ngIf="typing" style="bottom:0px; position:absolute;padding-left:10px">{{toUserId}} is typing ....</p>
+</ion-content>
+
+<ion-footer>
+  <div class="bottom_bar">
+    <ion-input type="text" placeholder="Type your message" [(ngModel)]="message"  (focus)="scrollBottom()" (keypress)="isTyping()"></ion-input>
+    <ion-fab middle right>
+      <button ion-fab mini tappable (click)="send(message)" [disabled]="!message"><ion-icon name="md-send"></ion-icon></button>
+    </ion-fab>
+  </div>
+</ion-footer>

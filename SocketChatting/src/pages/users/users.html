@@ -1,0 +1,22 @@
+<!--
+  Generated template for the UsersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="custom">
+    <ion-title>Users</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-item *ngFor="let item of userData" (click)="chat(item)">
+        {{item}}
+      </ion-item>
+  </ion-list>
+</ion-content>

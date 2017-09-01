@@ -1,0 +1,22 @@
+page-home {
+  .bottom_bar{
+    padding:10px;
+  }
+  .sender-class {
+    float: right;
+    background: #61c7b9 !important;
+    padding: 10px;
+    border-radius: 10px;
+    color:white
+  }
+  .receiver-class{
+    background: #eae8e8 !important;
+    padding: 10px;
+    border-radius: 10px;
+    float: left;
+  }
+  .label-md{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
